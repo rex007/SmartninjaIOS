@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="currencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5L2-hd-g8A">
+                                <rect key="frame" x="20" y="81" width="257" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="11" y="81" width="278" height="30"/>
+                                </variation>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zld-y0-a55">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <animations/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="297" y="32" width="76" height="128"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="MY6-K9-apI"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jV8-lz-r2N"/>
+                                </connections>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TlD-2m-aGG">
+                                <rect key="frame" x="232" y="30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="584-28-73d">
+                                <rect key="frame" x="110" y="28" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6L8-mD-36A">
+                                <rect key="frame" x="20" y="250" width="180" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.771420607669554" green="1" blue="0.64145021092296495" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="EUR">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="11" y="168" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="eurSelector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X8j-q0-Tj2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDM-2M-oXT">
+                                <rect key="frame" x="210" y="250" width="180" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.771420607669554" green="1" blue="0.64145021092296495" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="USD">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="133" y="168" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="usdSelector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WGh-Oa-Ogx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmm-w1-H4G">
+                                <rect key="frame" x="400" y="250" width="180" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.771420607669554" green="1" blue="0.64145021092296495" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="tintColor" red="1" green="0.74237783121123124" blue="0.9728050265271394" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="JPY">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="254" y="168" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="jpySelector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Rb-00-z9l"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yT-mx-agM" userLabel="resultToDisplay">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.029726285460992909" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="11" y="289" width="343" height="35"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5H-eP-yO6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.63187674958361006" green="0.61360967468452399" blue="0.67189545157068065" alpha="0.53789893617021278" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                <state key="normal" title="C">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.53789893617021278" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="11" y="338" width="59" height="59"/>
+                                </variation>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QPa-ji-Nra"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HuU-Wo-V0P">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="78" y="353" width="276" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="zld-y0-a55"/>
+                                <exclude reference="TlD-2m-aGG"/>
+                                <exclude reference="584-28-73d"/>
+                                <exclude reference="4yT-mx-agM"/>
+                                <exclude reference="R5H-eP-yO6"/>
+                                <exclude reference="HuU-Wo-V0P"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="zld-y0-a55"/>
+                                <include reference="4yT-mx-agM"/>
+                                <include reference="R5H-eP-yO6"/>
+                                <include reference="HuU-Wo-V0P"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="firstCurrency" destination="zld-y0-a55" id="xr2-VH-WWe"/>
+                        <outlet property="numberInput" destination="5L2-hd-g8A" id="OJM-Oc-wJW"/>
+                        <outlet property="rateText" destination="HuU-Wo-V0P" id="e5n-2y-J4R"/>
+                        <outlet property="resultToDisplay" destination="4yT-mx-agM" id="y0G-Zf-tIo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.5" y="337"/>
+        </scene>
+    </scenes>
+</document>
